@@ -1,0 +1,70 @@
+body{
+    margin: 0;
+    background-image: url(pexels-apgpotr-683039.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0 10px 0;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 30px;
+    display: block;
+}
+
+.board {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.columns {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+   gap: 20px;
+}
+
+.column {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+    min-height: 300px;
+}
+
+.column h2 {
+    margin-top: 0;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.card {
+    background-color: black;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: grab;
+}
+.pending h2 {
+    background-color: #D07C26;
+}
+
+.in-progress h2 {
+    background-color: #007B7F;
+}
+
+.done h2 {
+    background-color: #2C8F2C;
+}
+
+.failed h2 {
+    background-color: #C0352C;
+}
