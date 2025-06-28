@@ -1,70 +1,90 @@
+:root{
+    --category-1:#a2622d;
+    --category-2:#1b6161;
+    --category-3:#248224;
+    --category-4:#a22d22;
+}
+
+html{
+    box-sizing: border-box;
+}
+
 body{
-    margin: 0;
-    background-image: url(pexels-apgpotr-683039.jpg);
-    background-repeat: no-repeat;
+    margin:0;
+    background-image: url('https://cdn.pixabay.com/photo/2016/03/26/13/09/notebook-1280538_960_720.jpg');
     background-size: cover;
+    background-position: 50% 60%;
+    background-attachment: fixed;
     color: white;
+    overflow-y: hidden;
 }
-
-.title {
-    width: 100%;
+h1{
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px black;
+}
+.main-title{
     text-align: center;
-    margin: 30px 0 10px 0;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
+    font-size: 3rem;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* border:1px solid red; */
+}
+.drag-container{
+    margin:20px;
+}
+.drag-list{
+    display: flex;
+    align-items: flex-start;
+
+}
+.drag-column{
+    flex:1;
+    margin:0 10px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 10px;
-    font-size: 30px;
-    display: block;
+    overflow-x: hidden;
 }
-
-.board {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.columns {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-   gap: 20px;
-}
-
-.column {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 15px;
+.header{
+    display: flex;
+    justify-content: center;
+    margin:10px;
     border-radius: 10px;
-    width: 250px;
-    min-height: 300px;
 }
-
-.column h2 {
-    margin-top: 0;
-    text-align: center;
+.header h1{
+    font-size: 1.25rem;
+    /* border: 1px solid red; */
+}
+.backlog-column .header{
+    background-color: var(--category-1);
+}
+.progress-column .header{
+    background-color: var(--category-2);
+}
+.complete-column .header{
+    background-color: var(--category-3);
+}
+.reject-column .header{
+    background-color: var(--category-4);
+}
+.custom-scroll{
+    overflow-y: auto;
+    max-height: 52vh;
+}
+.drag-item-list{
+    min-height: 50px;
+}
+.drag-item{
+    margin:10px;
     padding: 10px;
-    border-radius: 5px;
-    color: white;
-}
-
-.card {
-    background-color: black;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: grab;
-}
-.pending h2 {
-    background-color: #D07C26;
-}
-
-.in-progress h2 {
-    background-color: #007B7F;
-}
-
-.done h2 {
-    background-color: #2C8F2C;
-}
-
-.failed h2 {
-    background-color: #C0352C;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+    cursor: pointer;
 }
